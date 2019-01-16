@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CengApp.Views.MailContentPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="15" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.Column="0" >
+                    <Image Source="https://www.mailpile.is/img/icon-512x512.png"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="0" Spacing="8" >
+
+                    <Entry x:Name="entry_to" Text="" IsEnabled="False" />
+
+                    <Entry x:Name="entry_subject" Text="" IsEnabled="False" />
+
+                    <Editor x:Name="entry_body" AutoSize="TextChanges" 
+                            Placeholder="Mail içeriği:" PlaceholderColor="#cc0000" />
+
+                    <Button Text="GÖNDER" x:Name="btn_sendMail" Clicked="sendMailFunction" Margin="10"
+                        BackgroundColor="Transparent" BorderColor="{StaticResource PrimaryBlue}" 
+                        TextColor="{StaticResource PrimaryBlue}" BorderRadius="20" BorderWidth="3" />
+
+                </StackLayout>
+
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

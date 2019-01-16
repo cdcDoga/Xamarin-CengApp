@@ -1,0 +1,1060 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CengApp.Views.PeoplePage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="BoxView">
+                <Setter Property="Color"            Value="#ffeecc" />
+            </Style>
+            
+            <Style TargetType="Image">
+                <Setter Property="WidthRequest"     Value="45" />
+                <Setter Property="HeightRequest"    Value="60" />
+                <Setter Property="Grid.RowSpan"     Value="4"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="BackgroundColor"  Value="Transparent" />
+                <Setter Property="FontSize"         Value="Micro" />
+            </Style>
+
+            <Style x:Key="btnCall" TargetType="ImageButton">
+                <Setter Property="BackgroundColor"  Value="Transparent" />
+                <Setter Property="Source"           Value="twotone_contact_phone_black_36.png" />
+            </Style>
+
+            <Style x:Key="btnMail" TargetType="ImageButton" BasedOn="btnCall">
+                <Setter Property="Source"           Value="twotone_contact_mail_black_36.png" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+
+        <Grid Padding="8" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            
+            <BoxView Grid.Row="0" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/aarslan2.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Dr.Öğr. Üyesi Ahmet ARSLAN" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: aarslan2@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail1" />
+                <Label Text="GSM: 555-555-5555" 
+                       Grid.Row="2" Grid.Column="1" x:Name="phone1" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn1" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn1_2" Style="{StaticResource btnMail}"/> 
+
+                </Grid>
+            </Grid> 
+            
+
+            <BoxView Grid.Row="0" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/yhoscan.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Prof.Dr. Yaşar HOŞCAN" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: hoscan@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail2" />
+                <Label Text="GSM: 555-444-5555" 
+                       Grid.Row="2" Grid.Column="1" x:Name="phone2" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn2" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn2_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+            
+            <BoxView Grid.Row="1" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/serkangunal.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Doç.Dr. Serkan GÜNAL" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: serkangunal@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail3" />
+                <Label Text="GSM: 555-333-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone3" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn3" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn3_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="1" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/ckaleli.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Doç.Dr. Cihan KALELİ" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: ckaleli@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail4" />
+                <Label Text="GSM: 555-222-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone4" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn4" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn4_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="2" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="2" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/akuysal.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Dr.Öğr. Üyesi Alper Kürşat UYSAL" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: akuysal@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail5" />
+                <Label Text="GSM: 555-111-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone5" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn5" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn5_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="2" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="2" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/abilge.png"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Dr.Öğr. Üyesi Alper BİLGE" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: abilge@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail6" />
+                <Label Text="GSM: 555-666-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone6" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn6" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn6_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+
+
+            <BoxView Grid.Row="3" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="3" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/sevcany.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Dr.Öğr. Üyesi Sevcan Y. GÜNDÜZ" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: sevcany@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail7" />
+                <Label Text="GSM: 555-777-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone7" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn7" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn7_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="3" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/byurekli.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör.Dr. Burcu Y. YILMAZEL" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: byurekli@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail8" />
+                <Label Text="GSM: 555-888-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone8" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn8" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn8_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="4" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="4" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/oozsen.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Öğr.Gör. Özgür ÖZŞEN" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: oozsen@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail9" />
+                <Label Text="GSM: 555-999-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone9" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn9" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn9_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="4" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="4" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/ekacmaz.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Öğr.Gör. Emre KAÇMAZ" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: emrekacmaz@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail10" />
+                <Label Text="GSM: 555-555-1234"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone10" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn10" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn10_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="5" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="5" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/roaltug.jpeg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Öğr.Gör. Reha Oğuz ALTUĞ" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: roaltug@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail11" />
+                <Label Text="GSM: 555-555-2345"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone11" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn11" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn11_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Color="#ffeecc" Grid.Row="5" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="5" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/ayargic.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Alper YARGIÇ" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: ayargic@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail12" />
+                <Label Text="GSM: 555-555-3456"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone12" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn12" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn12_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="6" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="6" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/etdemirkiran.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Emin Talip DEMİRKIRAN" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: etd@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail13" />
+                <Label Text="GSM: 555-555-4567"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone13" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn13" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn13_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="6" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="6" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/rasimcekik.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Rasim ÇEKİK" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: rasimcekik@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail14" />
+                <Label Text="GSM: 555-555-5678"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone14" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn14" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn14_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="7" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="7" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/mypak.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. M. Yasin PAK" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: mypak@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail15" />
+                <Label Text="GSM: 555-555-6789"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone15" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn15" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn15_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="7" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="7" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/zozdemir.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Zeynep BATMAZ" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: zozdemir@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail16" />
+                <Label Text="GSM: 555-555-9876"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone16" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn16" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn16_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="8" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="8" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/bekirparlak.bmp"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Bekir PARLAK" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: bekirparlak@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail17" />
+                <Label Text="GSM: 555-555-8765"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone17" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn17" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn17_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="8" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="8" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/tugbaturkoglu.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Tuğba T. KAYA" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: tugbaturkoglu@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail18" />
+                <Label Text="GSM: 555-555-7654"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone18" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn18" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn18_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="9" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="9" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/gciplak.bmp"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Gökhan ÇIPLAK" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: gciplak@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail19" />
+                <Label Text="GSM: 555-555-6543"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone19" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn19" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn19_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="9" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="9" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/ahmetaydin.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Ahmet AYDIN" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: ahmetaydin@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail20" />
+                <Label Text="GSM: 555-555-5432"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone20" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn20" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn20_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="10" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="10" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/sbaydemir.JPG"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Salih B. AYDEMiR" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: sbaydemir@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail21" />
+                <Label Text="GSM: 555-555-4321"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone21" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn21" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn21_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="10" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="10" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/ahmetalkilinc.jpeg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Ahmet ALKILINÇ" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: ahmetalkilinc@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail22" />
+                <Label Text="GSM: 555-123-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone22" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn22" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn22_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="11" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="11" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/iterzi.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. İsmail TERZİ" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: iterzi@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail23" />
+                <Label Text="GSM: 555-456-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone23" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn23" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn23_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="11" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="11" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/turgutdogan.bmp"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Araş.Gör. Turgut DOĞAN" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: turgutdogan@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail24" />
+                <Label Text="GSM: 555-789-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone24" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn24" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn24_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="12" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="12" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/htiryaki.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Öğr.Gör. Hande ÖZDEMİR" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: htiryaki@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail25" />
+                <Label Text="GSM: 555-159-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone25" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn25" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn25_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="12" Grid.Column="1" />
+            <Grid Padding="4" Grid.Row="12" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/aysesenel.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Bölüm Sek. Ayşe ŞENEL" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: aysesenel@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail26" />
+                <Label Text="GSM: 555-258-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone26" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn26" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn26_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+            <BoxView Grid.Row="13" Grid.Column="0" />
+            <Grid Padding="4" Grid.Row="13" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="http://ceng.eskisehir.edu.tr/img/serdogan.jpg"
+                       Grid.Row="0" Grid.Column="0" />
+                <Label Text="Öğrenci İşleri Sek. Sibel ERDOĞAN" 
+                       Grid.Row="0" Grid.Column="1" />
+                <Label Text="Mail: serdogan@anadolu.edu.tr" 
+                       Grid.Row="1" Grid.Column="1" x:Name="mail27" />
+                <Label Text="GSM: 555-357-5555"
+                       Grid.Row="2" Grid.Column="1" x:Name="phone27" />
+
+                <Grid Padding="4" Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ImageButton Grid.Row="0" Grid.Column="0" Clicked="Call" x:Name="btn27" Style="{StaticResource btnCall}" />
+                    <ImageButton Grid.Row="0" Grid.Column="1" Clicked="sendMail" x:Name="btn27_2" Style="{StaticResource btnMail}"/>
+
+                </Grid>
+            </Grid>
+            
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

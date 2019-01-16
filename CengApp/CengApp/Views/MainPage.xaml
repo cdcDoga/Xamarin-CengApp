@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:CengApp.Views"
+             x:Class="CengApp.Views.MainPage">
+
+    <TabbedPage.Children>
+
+        <NavigationPage Title="HAKKINDA">
+            <x:Arguments>
+                <views:AboutPage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="KİŞİLER">
+            <x:Arguments>
+                <views:PeoplePage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="ALTYAPI">
+            <x:Arguments>
+                <views:IfrastructurePage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="DERSLER">
+            <x:Arguments>
+                <views:CoursewarePage />
+            </x:Arguments>
+        </NavigationPage>
+
+    </TabbedPage.Children>
+
+</TabbedPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CengApp.Views.IfrastructurePage">
+
+    <ContentPage.Content>
+        <ScrollView Grid.Row="1">
+            <ListView x:Name="InfrastructureList" RowHeight="70" ItemSelected="EnlargePhoto">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name}" FontSize="16" Margin="8,8,8,2"/>
+                                    <Label Text="{Binding Capacity}" Margin="8,2,2,4" TextColor="{StaticResource LightTextColor}" />
+                                </StackLayout>
+
+                                <Image Source="{Binding Image}" Margin="10" WidthRequest="80" HeightRequest="60" HorizontalOptions="EndAndExpand" />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CengApp.Views.EnlargedPhoto">
+
+    <ContentPage.Content>
+        <ScrollView>
+
+            <Grid Padding="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Padding="0">
+                    <Grid Grid.Row="0" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" 
+                           x:Name="item_name"  TextColor="{StaticResource BurgundyHeader}" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Capacity}" 
+                           x:Name="item_capacity" HorizontalOptions="EndAndExpand" />
+
+                </Grid>
+                
+                <Image Grid.Row="1" Grid.Column="0" Source="{Binding Image}" x:Name="item_image"
+                       VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" />
+
+            </Grid>
+            
+        </ScrollView>
+    </ContentPage.Content>
+    
+
+</ContentPage>
