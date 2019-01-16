@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <Style TargetType="BoxView">
                 <Setter Property="Color"            Value="#ffeecc" />
-            </Style>
+            </Style> 
             
             <Style TargetType="Image">
                 <Setter Property="WidthRequest"     Value="45" />
